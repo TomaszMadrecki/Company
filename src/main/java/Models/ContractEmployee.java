@@ -11,7 +11,10 @@ public class ContractEmployee extends Employee {
 
     @Override
     public String toString() {
-        return "ContractEmployee{" + getName() + " " + getLastName() + ", " + getAddress() + ", ID:  " + getId() +
+        return "ContractEmployee{" + getName()
+                + " " + getLastName()
+                + ", " + getAddress()
+                + ", ID:  " + getId() +
                 ", contractCost = " + contractCost +
                 '}';
     }

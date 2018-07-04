@@ -13,7 +13,10 @@ public class HourlyEmployee extends Employee {
 
     @Override
     public String toString() {
-        return "HourlyEmployee{" + getName() + " " + getLastName() + ", " + getAddress() + ", ID:  " + getId() +
+        return "HourlyEmployee{" + getName()
+                + " " + getLastName()
+                + ", " + getAddress()
+                + ", ID:  " + getId() +
                 ", hoursOfWork = " + hoursOfWork +
                 ", hourlyCost = " + hourlyCost +
                 '}';
