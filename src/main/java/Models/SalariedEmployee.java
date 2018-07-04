@@ -17,7 +17,7 @@ public class SalariedEmployee extends Employee {
                 '}';
     }
 
-    double calculatePaycheck() {
+    public double calculatePaycheck() {
         return monthlySalary * 0.87;
     }
 

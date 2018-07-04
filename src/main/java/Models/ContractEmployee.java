@@ -2,7 +2,7 @@ package Models;
 
 public class ContractEmployee extends Employee {
 
-    double contractCost;
+    private double contractCost;
 
     public ContractEmployee(String name, String lastName, String address, double contractCost) {
         super(name, lastName, address);
@@ -16,7 +16,7 @@ public class ContractEmployee extends Employee {
                 '}';
     }
 
-    double calculatePaycheck() {
+    public double calculatePaycheck() {
         return contractCost * 0.85;
     }
 

@@ -2,8 +2,8 @@ package Models;
 
 public class HourlyEmployee extends Employee {
 
-    int hoursOfWork;
-    double hourlyCost;
+    private int hoursOfWork;
+    private double hourlyCost;
 
     public HourlyEmployee(String name, String lastName, String address, int hoursOfWork, double hourlyCost) {
         super(name, lastName, address);
@@ -19,7 +19,7 @@ public class HourlyEmployee extends Employee {
                 '}';
     }
 
-    double calculatePaycheck() {
+    public double calculatePaycheck() {
         return hourlyCost * hoursOfWork;
     }
 
