@@ -27,4 +27,5 @@ public class EmployeeTest {
 
         assertEquals(6239, contractEmployee.calculatePaycheck(), 1);
     }
+
 }
