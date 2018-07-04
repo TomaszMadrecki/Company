@@ -1,23 +1,16 @@
 package Models;
 
+import java.util.Date;
+import java.util.UUID;
+
 public class SalariedEmployee extends Employee {
 
     private double monthlySalary;
 
-    public SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
+    private SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
         super(name, lastName, address);
         this.monthlySalary = monthlySalary;
 
-    }
-
-    @Override
-    public String toString() {
-        return "SalariedEmployee{" + getName()
-                + " " + getLastName()
-                + ", " + getAddress()
-                + ", ID:  " + getId() +
-                ", monthlySalary = " + monthlySalary +
-                '}';
     }
 
     public double calculatePaycheck() {
@@ -28,11 +21,57 @@ public class SalariedEmployee extends Employee {
 
     }
 
+    @Override
+    public String toString() {
+        return "SalariedEmployee{" + getName()
+                + " " + getLastName()
+                + ", " + getAddress()
+                + ", ID:  " + getId()
+                + ", birth at: " + getDateOfBirth() +
+                ", monthlySalary = " + monthlySalary +
+                '}';
+    }
+
     public double getMonthlySalary() {
         return monthlySalary;
     }
 
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
+    }
+
+    public static class SalariedEmployeeBuilder {
+
+        private String name;
+        private String lastName;
+        private String address;
+        private Date dateOfBirth;
+        private int age;
+        private UUID id;
+        private double monthlySalary;
+
+        public SalariedEmployeeBuilder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public SalariedEmployeeBuilder lastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
+        public SalariedEmployeeBuilder address(String address) {
+            this.address = address;
+            return this;
+        }
+
+        public SalariedEmployeeBuilder monthlySalary(double monthlySalary) {
+            this.monthlySalary = monthlySalary;
+            return this;
+        }
+
+        public SalariedEmployee build() {
+            return new SalariedEmployee(name, lastName, address, monthlySalary);
+        }
     }
 }

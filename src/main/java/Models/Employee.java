@@ -1,16 +1,21 @@
 package Models;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.UUID;
 
 public abstract class Employee {
     private String name;
     private String lastName;
     private String address;
-    private String dateOfBirth;
+    private Date dateOfBirth;
     private int age;
     private UUID id;
 
-    public Employee(String name, String lastName, String address) {
+    SimpleDateFormat formater = new SimpleDateFormat("dd/MM/yyyy");
+
+    Employee(String name, String lastName, String address) {
         this.name = name;
         this.lastName = lastName;
         this.address = address;
@@ -45,6 +50,10 @@ public abstract class Employee {
 
     public UUID getId() {
         return id;
+    }
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 
     public void setName(String name) {
