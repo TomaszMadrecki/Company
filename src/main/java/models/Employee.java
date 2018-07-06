@@ -1,10 +1,15 @@
 package models;
 
+import com.google.gson.Gson;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
 public abstract class Employee {
+
+    Gson gson = new Gson();
+
     private String name;
     private String lastName;
     private String address;
@@ -31,9 +36,11 @@ public abstract class Employee {
         return id != null ? id.equals(employee.id) : employee.id == null;
     }
 
-    abstract double calculatePaycheck();
+    public abstract double calculatePaycheck();
 
-    abstract void editData();
+    public abstract String employeeToJson();
+
+    public abstract void editData();
 
     public String getName() {
         return name;

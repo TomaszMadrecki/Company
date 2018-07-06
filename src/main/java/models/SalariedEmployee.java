@@ -7,17 +7,21 @@ public class SalariedEmployee extends Employee {
 
     private double monthlySalary;
 
-    public SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
+    private SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
         super(name, lastName, address);
         this.monthlySalary = monthlySalary;
 
+    }
+
+    public String employeeToJson() {
+        return gson.toJson(this);
     }
 
     public double calculatePaycheck() {
         return monthlySalary * 0.87;
     }
 
-    void editData() {
+    public void editData() {
 
     }
 

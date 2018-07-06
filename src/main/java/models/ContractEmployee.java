@@ -16,9 +16,14 @@ public class ContractEmployee extends Employee {
         return contractCost * 0.85;
     }
 
-    void editData() {
+    public String employeeToJson() {
+        return gson.toJson(this);
+    }
+
+    public void editData() {
 
     }
+
 
     @Override
     public String toString() {

@@ -14,11 +14,15 @@ public class HourlyEmployee extends Employee {
         this.hourlyCost = hourlyCost;
     }
 
+    public String employeeToJson() {
+        return gson.toJson(this);
+    }
+
     public double calculatePaycheck() {
         return hourlyCost * hoursOfWork;
     }
 
-    void editData() {
+    public void editData() {
 
     }
 
