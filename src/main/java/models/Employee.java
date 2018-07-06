@@ -1,6 +1,5 @@
-package Models;
+package models;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;

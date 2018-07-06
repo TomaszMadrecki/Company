@@ -1,6 +1,6 @@
-import Models.ContractEmployee;
-import Models.HourlyEmployee;
-import Models.SalariedEmployee;
+import models.ContractEmployee;
+import models.HourlyEmployee;
+import models.SalariedEmployee;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 import java.util.Date;
 import java.util.UUID;
@@ -7,7 +7,7 @@ public class SalariedEmployee extends Employee {
 
     private double monthlySalary;
 
-    private SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
+    public SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
         super(name, lastName, address);
         this.monthlySalary = monthlySalary;
 
