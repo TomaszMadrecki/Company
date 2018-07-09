@@ -1,5 +1,7 @@
 package app;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import models.Employee;
 import strategy.Strategy;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ public class Company {
 
     List<Employee> employees = new ArrayList<Employee>();
     Map<Employee, Double> payroll = new HashMap<Employee, Double>();
+    Gson gson = new Gson();
     private Strategy strategy;
     private static Company company = null;
 
@@ -34,8 +37,8 @@ public class Company {
         employees.remove(index);
     }
 
-    public void editEmployee() {
-
+    public void editEmployee(int index) {
+        employees.get(index).editData();
     }
 
     public double getPaycheck(int index) {
@@ -49,5 +52,8 @@ public class Company {
         return payroll;
     }
 
+    public String payrollToJson() {
+        return gson.toJson(payroll);
+    }
 
 }

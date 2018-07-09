@@ -23,7 +23,6 @@ public class HourlyEmployee extends Employee {
     }
 
     public void editData() {
-
     }
 
     @Override

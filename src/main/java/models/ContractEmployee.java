@@ -21,7 +21,6 @@ public class ContractEmployee extends Employee {
     }
 
     public void editData() {
-
     }
 
 

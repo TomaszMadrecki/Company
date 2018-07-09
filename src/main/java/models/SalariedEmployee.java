@@ -10,7 +10,6 @@ public class SalariedEmployee extends Employee {
     private SalariedEmployee(String name, String lastName, String address, double monthlySalary) {
         super(name, lastName, address);
         this.monthlySalary = monthlySalary;
-
     }
 
     public String employeeToJson() {
@@ -22,7 +21,6 @@ public class SalariedEmployee extends Employee {
     }
 
     public void editData() {
-
     }
 
     @Override
